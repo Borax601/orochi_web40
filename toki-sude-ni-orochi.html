@@ -62,6 +62,24 @@
 
       /* 4) 最上段セクションの外側マージンで余白が増えないよう保険（副作用なし） */
       #page-ai-gallery .content-section:first-of-type{ margin-top: 0; }
+
+      /* 5) モバイル表示での中央配置調整 */
+      @media (max-width: 768px) {
+        #page-ai-gallery .section-title {
+          width: fit-content !important;
+          margin: 20px auto 28px auto !important;
+          text-align: center !important;
+          max-width: calc(100% - 40px) !important;
+        }
+      }
+
+      @media (max-width: 480px) {
+        #page-ai-gallery .section-title {
+          font-size: clamp(1.6rem, 4vw, 2.2rem) !important;
+          margin: 15px auto 24px auto !important;
+          max-width: calc(100% - 20px) !important;
+        }
+      }
     </style>
 </head>
 <body id="page-ai-gallery">
